@@ -1,8 +1,8 @@
 package org.example.climber;
 
-import org.example.goclimbingyes.StartClimbing;
-import org.example.goclimbingyes.WarningForOutside;
-import org.example.goclimbingyes.WhereAreWeClimbing;
+import org.example.interfaces.StartClimbing;
+import org.example.interfaces.WarningForOutside;
+import org.example.interfaces.WhereAreWeClimbing;
 
 public class RopeClimber extends Climber implements StartClimbing, WhereAreWeClimbing, WarningForOutside {
     boolean hasClimbingHarness;

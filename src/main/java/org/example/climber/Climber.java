@@ -23,4 +23,27 @@ public abstract class Climber {
         this.location = location;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public boolean isHasClimbingShoes() {
+        return hasClimbingShoes;
+    }
+
+    public boolean isUsesLiquidChalk() {
+        return usesLiquidChalk;
+    }
+
+    public boolean isUsesChalkPowder() {
+        return usesChalkPowder;
+    }
+
+    public boolean isLocationOutside() {
+        return isLocationOutside;
+    }
+
+    public String getLocation() {
+        return location;
+    }
 }
