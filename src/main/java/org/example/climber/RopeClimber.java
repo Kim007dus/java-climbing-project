@@ -5,12 +5,10 @@ import org.example.interfaces.WarningForOutside;
 import org.example.interfaces.WhereAreWeClimbing;
 
 public class RopeClimber extends Climber implements StartClimbing, WhereAreWeClimbing, WarningForOutside {
-    boolean hasClimbingHarness;
     String sortBelayDevice;
 
-    public RopeClimber(String name, boolean hasClimbingShoes, boolean usesLiquidChalk, boolean usesChalkPowder, boolean hasClimbingHarness, String sortBelayDevice, boolean isLocationOutside, String location) {
-        super(name, hasClimbingShoes, usesLiquidChalk, usesChalkPowder, isLocationOutside, location);
-        this.hasClimbingHarness = hasClimbingHarness;
+    public RopeClimber(String name, int pairOfClimbingShoes, boolean usesLiquidChalk, boolean usesChalkPowder, boolean isLocationOutside, String location, String sortBelayDevice) {
+        super(name, pairOfClimbingShoes, usesLiquidChalk, usesChalkPowder, isLocationOutside, location);
         this.sortBelayDevice = sortBelayDevice;
     }
 

@@ -8,42 +8,18 @@ package org.example.climber;
 
 public abstract class Climber {
     String name;
-    boolean hasClimbingShoes;
+    int pairOfClimbingShoes;
     public boolean usesLiquidChalk;
     public boolean usesChalkPowder;
     public boolean isLocationOutside;
     String location;
 
-    public Climber(String name, boolean hasClimbingShoes, boolean usesLiquidChalk, boolean usesChalkPowder, boolean isLocationOutside, String location) {
+    public Climber(String name, int pairOfClimbingShoes, boolean usesLiquidChalk, boolean usesChalkPowder, boolean isLocationOutside, String location) {
         this.name = name;
-        this.hasClimbingShoes = hasClimbingShoes;
+        this.pairOfClimbingShoes = pairOfClimbingShoes;
         this.usesLiquidChalk = usesLiquidChalk;
         this.usesChalkPowder = usesChalkPowder;
         this.isLocationOutside = isLocationOutside;
         this.location = location;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public boolean isHasClimbingShoes() {
-        return hasClimbingShoes;
-    }
-
-    public boolean isUsesLiquidChalk() {
-        return usesLiquidChalk;
-    }
-
-    public boolean isUsesChalkPowder() {
-        return usesChalkPowder;
-    }
-
-    public boolean isLocationOutside() {
-        return isLocationOutside;
-    }
-
-    public String getLocation() {
-        return location;
     }
 }

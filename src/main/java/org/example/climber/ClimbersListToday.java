@@ -1,42 +1,56 @@
 package org.example.climber;
+
 import java.util.ArrayList;
 
 public class ClimbersListToday {
 
     public ArrayList<Climber> climbers = new ArrayList<>();
-    public ArrayList<Climber> liquidChalkUsers = new ArrayList<>();
-    public ArrayList<Climber> chalkPowderUsers = new ArrayList<>();
-    public ArrayList<Climber> isGoingOutside = new ArrayList<>();
 
-
-    public void setLiquidChalkUsers() {
+    public ArrayList<Climber> getLiquidChalkUsers() {
+        var result = new ArrayList<Climber>();
         for (Climber climber : climbers) {
             if (climber.usesLiquidChalk) {
-                liquidChalkUsers.add(climber);
+                result.add(climber);
             }
         }
+        return result;
     }
 
-    public void setChalkPowderUsers() {
+    public ArrayList<Climber> getChalkPowderUsers() {
+        var result = new ArrayList<Climber>();
         for (Climber climber : climbers) {
             if (climber.usesChalkPowder) {
-                chalkPowderUsers.add(climber);
+                result.add(climber);
             }
         }
+        return result;
     }
 
-    public void setIsGoingOutside() {
+    public ArrayList<Climber> getISGoingOutside() {
+        var result = new ArrayList<Climber>();
         for (Climber climber : climbers) {
             if (climber.isLocationOutside) {
-                isGoingOutside.add(climber);
-
+                result.add(climber);
             }
         }
+        return result;
     }
 
+    public int totalPairOfClimbingShoes() {
+        int total = 0;
+        for (Climber climber : climbers) {
+            total += climber.pairOfClimbingShoes;
+        }
+        return total;
+    }
+
+    public String namesOfClimbersOutside() {
+        String names = "";
+        for (Climber climber : climbers) {
+            if (climber.isLocationOutside) {
+                names += climber.name + " & ";
+            }
+        }
+        return names;
+    }
 }
-
-
-
-
-

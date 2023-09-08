@@ -5,12 +5,10 @@ import org.example.interfaces.WarningForOutside;
 import org.example.interfaces.WhereAreWeClimbing;
 
 public class FreeClimber extends Climber implements StartClimbing, WhereAreWeClimbing, WarningForOutside {
-    public FreeClimber(String name, boolean hasClimbingShoes, boolean usesLiquidChalk, boolean usesChalkPowder, boolean isLocationOutside, String location) {
-        super(name, hasClimbingShoes, usesLiquidChalk, usesChalkPowder, isLocationOutside, location);
+    public FreeClimber(String name, int pairOfClimbingShoes, boolean usesLiquidChalk, boolean usesChalkPowder, String location) {
+        super(name, pairOfClimbingShoes, usesLiquidChalk, usesChalkPowder, true, location);
     }
-
-
-    // Een freeclimber heeft nooit meer nodig dan dit om te gaan klimmen.
+    // Een freeclimber heeft nooit meer nodig dan dit om te gaan klimmen en zijn locatie is altijd buiten, daarom is deze boolean in de super meegegeven als standaard op true.
 
     @Override
     public void startClimbing() {
@@ -19,8 +17,7 @@ public class FreeClimber extends Climber implements StartClimbing, WhereAreWeCli
 
     @Override
     public void locationOfClimbing() {
-        WhereAreWeClimbing.super.locationOfClimbing();
-        System.out.println("Let's go with " + name + " to " + location + "!");
+       System.out.println("Let's go with " + name + " to " + location + "!");
     }
 
     @Override
